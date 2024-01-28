@@ -32,9 +32,4 @@ public class CompanyVariant extends BaseEntity {
 
     @OneToOne
     private Company company;
-
-//    @Override
-//    public int compareTo(CompanyVariant o) {
-//        return  capitalization.compareTo(o.getCapitalization());
-//    }
 }

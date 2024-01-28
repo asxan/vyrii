@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.time.YearMonth;
 import java.util.HashSet;
 import java.util.Set;
@@ -26,7 +25,7 @@ public class Company extends BaseEntity {
     private String owner;
 
     @Column(name = "founding_year", nullable = false)
-    private YearMonth foundingYear;
+    private Integer foundingYear;
 
     @ManyToMany
     @JoinTable(
@@ -34,7 +33,7 @@ public class Company extends BaseEntity {
             joinColumns = @JoinColumn(name = "company_id"),
             inverseJoinColumns = @JoinColumn(name = "company_image_id")
     )
-    private Set<CompanyImages> companyImages;
+    private Set<CompanyImage> companyImages;
 
     public Company() {
         this.companyImages = new HashSet<>();

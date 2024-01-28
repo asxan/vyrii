@@ -4,7 +4,7 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
+import org.apache.commons.collections4.CollectionUtils;
 import ua.org.vyrii.exception.EntityUnexistsException;
 import ua.org.vyrii.exception.NotValidFieldDataException;
 import ua.org.vyrii.persistence.entity.company.Company;
@@ -22,6 +22,7 @@ import static ua.org.vyrii.util.ExceptionUtil.ENTITY_UNEXISTS_EXCEPTION;
 public class CompanyServiceImpl implements CompanyService {
 
     private final CompanyRepository companyRepository;
+
 
     @Override
     public void create(Company entity) {

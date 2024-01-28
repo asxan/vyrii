@@ -15,7 +15,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "company_images")
-public class CompanyImages extends BaseEntity {
+public class CompanyImage extends BaseEntity {
 
     @Column(name = "image_url", nullable = false)
     private String imageUrl;
@@ -26,7 +26,7 @@ public class CompanyImages extends BaseEntity {
     @ManyToMany(mappedBy = "companyImages")
     private Set<Company> companies;
 
-    public CompanyImages() {
+    public CompanyImage() {
         this.companies = new HashSet<>();
         this.mainImage = false;
     }
