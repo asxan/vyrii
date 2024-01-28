@@ -1,4 +1,10 @@
 package ua.org.vyrii.api.dto.response;
 
-public interface ResponseDto {
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public abstract class ResponseDto {
+    private Long id;
 }
