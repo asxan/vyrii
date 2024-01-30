@@ -23,12 +23,12 @@ public class CompanyController {
     private final CompanyPdpFacade companyPdpFacade;
 
     @GetMapping("/plp")
-    public ResponseEntity<List<CompanyPlpDto>> findAll(){
+    public ResponseEntity<List<CompanyPlpDto>> findAll() {
         return ResponseEntity.ok(companyPlpFacade.findAll());
     }
 
     @GetMapping("/pdp/{companyId}")
-    public ResponseEntity<CompanyPdpDto> findVariantByCompany(@PathVariable Long companyId){
+    public ResponseEntity<CompanyPdpDto> findVariantByCompany(@PathVariable Long companyId) {
         return ResponseEntity.ok(companyPdpFacade.findByCompanyId(companyId));
     }
 }
